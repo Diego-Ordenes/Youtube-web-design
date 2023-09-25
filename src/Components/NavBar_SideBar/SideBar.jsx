@@ -8,7 +8,7 @@ import img_sub_1 from "../../assets/img/luisito.jpg";
 import img_sub_2 from "../../assets/img/soydalto.jpg";
 import img_sub_3 from "../../assets/img/auron.jpg";
 import img_sub_4 from "../../assets/img/elrubius.jpg";
-import img_sub_5 from "../../assets/img/elxokasTV.jpg";
+import img_sub_5 from "../../assets/img/elxokastv.jpg";
 import img_sub_6 from "../../assets/img/stimp.jpg";
 import img_sub_7 from "../../assets/img/leo.jpg";
 import {
