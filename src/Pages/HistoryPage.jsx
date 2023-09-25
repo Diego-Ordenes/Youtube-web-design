@@ -19,8 +19,8 @@ function HistoryPage() {
                 <span className="font-extrabold text-base">18 Sep</span>
                  <div>
                     <ul>
-                      {video_yt.map((videoList) => (
-                      <VideoList key={videoList.id} videoList={videoList} urlHistory={true}/>
+                      {video_yt.map((content) => (
+                      <VideoList key={content.id} content={content} urlHistory={true}/>
                      ))}
                     </ul>
                  </div>

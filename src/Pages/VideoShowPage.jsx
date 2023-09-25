@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
 import video_corto from "../assets/videos/video_corto.mp4";
-import img_auron from "../assets/img/auron.jpg";
+
 
 import { BsBell } from "react-icons/bs";
 import { IoIosArrowDown } from "react-icons/io";

@@ -1,8 +1,7 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 
-import { useContext} from "react";
-import {useLocation } from "react-router-dom"
+/* Images and iconos of "React/Icons" */
 import img_logo_yt from "../../assets/img/youtube-logo.png";
 import img_sub_1 from "../../assets/img/luisito.jpg";
 import img_sub_2 from "../../assets/img/soydalto.jpg";
@@ -11,15 +10,9 @@ import img_sub_4 from "../../assets/img/elrubius.jpg";
 import img_sub_5 from "../../assets/img/elxokastv.jpg";
 import img_sub_6 from "../../assets/img/stimp.jpg";
 import img_sub_7 from "../../assets/img/leo.jpg";
-import {
 
-  AiOutlineQuestionCircle,
-} from "react-icons/ai";
-import {
-  
-  MdOutlineAppShortcut,
-  MdOutlineSubscriptions,
-} from "react-icons/md";
+import { AiOutlineQuestionCircle} from "react-icons/ai";
+import { MdOutlineAppShortcut,MdOutlineSubscriptions,} from "react-icons/md";
 import {  PiMusicNoteLight } from "react-icons/pi";
 import { BiSolidHome, BiSolidVideos, BiTimeFive, BiLike } from "react-icons/bi";
 import { GoHistory } from "react-icons/go";
@@ -30,13 +23,14 @@ import { ImNewspaper } from "react-icons/im";
 import { TfiCup } from "react-icons/tfi";
 import { BsLightbulb, BsFlag, BsExclamationDiamond } from "react-icons/bs";
 import { TbBrandYoutubeKids } from "react-icons/tb";
-import {
-  SiYoutubemusic,
-  SiYoutubegaming,
-  SiYoutubestudio,
-} from "react-icons/si";
+import { SiYoutubemusic,SiYoutubegaming,SiYoutubestudio,} from "react-icons/si";
 import { LuSettings } from "react-icons/lu";
+
+/* */
+import { useContext} from "react";
+import {useLocation } from "react-router-dom"
 import { MyContext } from "../../Context/ContextAll";
+import { Link } from 'react-router-dom';
 
 
 function SideBar() {
@@ -64,12 +58,12 @@ const videoId = isVideoShowPage ? match[1] : null;
           {/* Inicio */}
           <ul className="border-b-2 font-extrabold">
             <li className="py-2 px-5 hover:bg-color-gray rounded-lg cursor-pointer">
-              <a href="/" className="flex items-center">
+              <Link to={'/'}  className="flex items-center">
                 <BiSolidHome className="w-6 h-6 inline opacity-90" />
                 <span className={`text-sm opacity-90 text-black pl-6 text-overflow: ellipsis; overflow-hidden whitespace-nowrap ${menuVisible ? "hidden" : ""}`}>
                   Inicio
                 </span>
-              </a>
+              </Link>
             </li>
             <li className="py-2 px-5 hover:bg-color-gray rounded-lg cursor-pointer">
               <a href="#" className="flex items-center">
@@ -90,20 +84,20 @@ const videoId = isVideoShowPage ? match[1] : null;
           </ul>
           <ul className="py-6 border-b-2 font-extrabold">
             <li className="py-2 px-5 hover:bg-color-gray rounded-lg cursor-pointer">
-              <a href="/mylibrary" className="flex items-center">
+              <Link to={'/mylibrary'} className="flex items-center">
                 <BiSolidVideos className="w-6 h-6 inline opacity-90" />
                 <span className={`text-sm opacity-90 text-black pl-6 text-overflow: ellipsis; overflow-hidden whitespace-nowrap ${menuVisible  ? "hidden" : ""}`}>
                   Mi biblioteca
                 </span>
-              </a>
+              </Link>
             </li>
             <li className="py-2 px-5 hover:bg-color-gray rounded-lg cursor-pointer">
-              <a href="/history" className="flex items-center">
+              <Link to={'/history'} className="flex items-center">
                 <GoHistory className="w-6 h-6 inline opacity-90" />
                 <span className={`text-sm opacity-90 text-black pl-6 text-overflow: ellipsis; overflow-hidden whitespace-nowrap ${menuVisible ? "hidden" : ""}`}>
                   Historial
                 </span>
-              </a>
+              </Link>
             </li>
             <li className="py-2 px-5 hover:bg-color-gray rounded-lg cursor-pointer">
               <a href="#" className="flex items-center">
@@ -114,20 +108,20 @@ const videoId = isVideoShowPage ? match[1] : null;
               </a>
             </li>
             <li className="py-2 px-5 hover:bg-color-gray rounded-lg cursor-pointer">
-              <a href="/seelater" className="flex items-center">
+              <Link to={'/seelater'}  className="flex items-center">
                 <BiTimeFive className="w-6 h-6 inline opacity-90" />
                 <span className={`text-sm opacity-90 text-black pl-6 text-overflow: ellipsis; overflow-hidden whitespace-nowrap ${menuVisible ? "hidden" : ""}`}>
                   Ver mas tarde
                 </span>
-              </a>
+              </Link>
             </li>
             <li className="py-2 px-5 hover:bg-color-gray rounded-lg cursor-pointer">
-              <a href="/likevideos" className="flex items-center">
+              <Link to={'/likevideos'} className="flex items-center">
                 <BiLike className="w-6 h-6 inline opacity-90" />
                 <span className={`text-sm opacity-90 text-black pl-6 text-overflow: ellipsis; overflow-hidden whitespace-nowrap ${menuVisible ? "hidden" : ""}`}>
                   Videos me gusta
                 </span>
-              </a>
+              </Link>
             </li>
             <li className="py-2 px-5 hover:bg-color-gray rounded-lg cursor-pointer">
               <a href="#" className="flex items-center">

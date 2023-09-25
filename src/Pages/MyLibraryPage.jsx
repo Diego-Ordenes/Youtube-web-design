@@ -7,11 +7,13 @@ import {MdKeyboardArrowDown,MdOutlinePlaylistPlay} from "react-icons/md"
 import {FiScissors} from "react-icons/fi"
 import img_perfil from "../assets/img/baby_yoda.jpg";
 
-import { MyContext } from "../Context/ContextAll";
 
 import VideoCardInside from "../Components/CardVideos/VideoCardInside";
+import { Link } from "react-router-dom";
 import { video_yt } from "../data/video_Datas";
+import { MyContext } from "../Context/ContextAll";
 import { useContext } from "react";
+
 function MyLibraryPage() {
   const {toggleListOfReproduction,menuListOfReproduction} = useContext(MyContext);
 
@@ -29,10 +31,10 @@ function MyLibraryPage() {
            <div className="border-b-2 pb-8">
              <div className="flex justify-between items-center w-full py-4">
             <div className="flex items-center">
-              <a href="/history">
+              <Link to={'/history'}>
               <GiBackwardTime className="w-6 h-6 inline" />
               <span className="text-base font-extrabold pl-4">Historial</span>
-              </a>
+              </Link>
             </div>
             <div>
               <a href="#" className="text-blue-500 py-2 px-4 rounded-2xl font-extrabold hover:bg-blue-100">Ver todo
@@ -51,10 +53,10 @@ function MyLibraryPage() {
            <div className="border-b-2 pb-8">
              <div className="flex justify-between items-center w-full py-4">
             <div className="flex items-center">
-              <a href="/seelater">
+              <Link to={'/seelater'}>
               <IoMdTime className="w-6 h-6 inline" />
               <span className="text-base font-extrabold pl-4">Ver más tarde</span>
-              </a>
+              </Link>
               <span className="pl-4">17</span>
             </div>
             <div>
@@ -117,8 +119,8 @@ function MyLibraryPage() {
            <div className="border-b-2 pb-8">
              <div className="flex justify-between items-center w-full py-4">
             <div className="flex items-center">
-              <a href="/likevideos"><AiOutlineLike className="w-6 h-6 inline" />
-              <span className="text-base font-extrabold pl-4">Videos que me gustan</span></a>
+              <Link to={'/likevideos'}><AiOutlineLike className="w-6 h-6 inline" />
+              <span className="text-base font-extrabold pl-4">Videos que me gustan</span></Link>
               <span className="pl-4">3523</span>
             </div>
             <div>

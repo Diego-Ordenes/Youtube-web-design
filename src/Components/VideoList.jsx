@@ -40,7 +40,7 @@ function VideoList({ content, urlHistory, urlSeeLaterVideo, urlLikeVideo, urlVid
 
 
   return (
-    <li className="flex items-center justify-between w-full py-2 cursor-pointer relative"  onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+    <li  className="flex items-center justify-between w-full py-2 cursor-pointer relative"  onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
       <Link to={`/videos/${content.id}`}>
         <div className="flex w-full ">
           <div className="flex items-center">
