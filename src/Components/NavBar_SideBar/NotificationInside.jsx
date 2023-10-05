@@ -18,24 +18,29 @@ function NotificationInside({content}) {
 
     
   return (
-    <Link to={`/videos/${content.id}`}>
-        <div  className="flex items-start gap-4 p-4 max-sm:gap-2 max-sm:p-2">
+    <>
+    
+      <div  className="flex items-start  max-sm:gap-2 max-sm:p-2">
+      <Link to={`/videos/${content.id}`}>
+        <div className="flex items-start gap-4 p-4 max-sm:gap-2 max-sm:p-2">
         <div className="w-12 max-sm:w-10">
         <img src={content.img_channel} alt="" className="w-full rounded-full" />
         </div>
-      <div className="flex flex-col w-64 max-sm:w-4/5">
+        <div className="flex flex-col w-64 max-sm:w-4/5">
         <p className="text-base  max-sm:text-xs overflow-hidden whitespace-normal overflow-ellipsis line-clamp-3  max max-sm:line-clamp-2">
           {content.nom_channel} ha subido:
           <span className="">{content.title}</span>
         </p>
         <span className="text-xs text-color-black opacity-80 pt-2">
-          Hace {content.time_uploaded} meses
+          Hace {content.time_uploaded} 
         </span>
-      </div>
-      <div className="w-28 max-sm:w-24">
+        </div>
+        <div className="w-28 max-sm:w-24">
         <img src={content.img_video} alt="" className="w-full rounded-sm" />
-      </div>
-      <div className="relative">
+        </div>
+        </div>
+      </Link>
+        <div className="relative top-4 max-sm:top-0">
         <button onClick={toggleNotificationsInside}>
           <AiOutlineMore className="w-6 h-6" />
         </button>
@@ -55,10 +60,9 @@ function NotificationInside({content}) {
             </li>
           </ul>
         </div>
-      </div>
         </div>
-    </Link>
-    
+      </div>
+    </>
   )
 }
 
